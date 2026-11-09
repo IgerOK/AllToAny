@@ -32,3 +32,9 @@ Record significant choices here. Each entry stays forever — no deletion, only 
 - Decision: all system elements live inside `.project-memory/` — `memory-autosave.sh` and the `pre-commit` hook moved into the folder, `scripts/` and `.githooks/` deleted. Hook install: `git config core.hooksPath .project-memory`.
 - Alternatives considered: keep scripts outside the folder — rejected: the user wants a single self-contained folder.
 - Consequences: installing the memory in another project = copying one folder; all path references updated (AGENTS.md, CONTEXT.md, both READMEs, the scripts themselves).
+
+## 2026-11-09 — AllToAny as the single memory repo
+
+- Decision: AllToAny is the single public repo of the memory system; older siblings (AllToZed, AllToDSH, alltoone, allToOne-setup) will be deleted by the user.
+- Alternatives considered: "Смежные проекты" section with cross-links in the README — rejected: not needed once the old repos are gone.
+- Consequences: AllToAny docs contain no external links to sibling repos (verified by grep); deleting them breaks nothing.
