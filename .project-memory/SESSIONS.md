@@ -75,3 +75,11 @@ Always start each new entry with a blank line.
 - **Verified:** `memory-check.sh` — 0 ошибок / 0 предупреждений; ручной запуск `pre-commit` проходит; `memory-autosave.sh` в чистом состоянии сообщает «nothing to save»; рабочее дерево чистое после коммита.
 - **Not done / limitations:** хук не активирован (решение пользователя — оставить); secret-скан в `memory-check.sh` фактически не работает (неверные флаги grep) — только advisory.
 - **Next:** ожидает подтверждения пользователя. Опционально: активировать хук, починить secret-скан.
+
+## 2026-11-09 — AllToAny published on GitHub
+
+- **Request:** опубликовать память-систему на GitHub как чистый репозиторий без истории, единым коммитом.
+- **Done:** старый .git (9 коммитов) удалён, репо пересобрано с нуля (main, 15 файлов, exec-биты на скриптах); создано публичное репо `IgerOK/AllToAny`, remote origin добавлен, пуш выполнен.
+- **Verified:** push `main -> main` прошёл, tracking установлен; на GitHub ровно 1 коммит.
+- **Not done / limitations:** SSH-ключ к GitHub не настроен (пуш по HTTPS через GCM); secret-скан в `memory-check.sh` не работает (неверные флаги grep) — advisory.
+- **Next:** ожидает подтверждения пользователя. Опционально: активировать pre-commit хук, починить secret-скан.

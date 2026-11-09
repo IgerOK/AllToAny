@@ -11,7 +11,7 @@ status: idle
 - цель: полная самодостаточность папки .project-memory (ничего вне неё) + памятка для пользователя
 - что сделано: `memory-autosave.sh` и `pre-commit` перенесены внутрь папки, `scripts/` и `.githooks/` удалены, все ссылания на пути обновлены, создана `.project-memory/README.md`
 - статус: done
-- следующий шаг: указание пользователя: имя репо GitHub (public/private) → remote + push. Опционально: активировать хук, починить secret-скан
+- следующий шаг: none — опубликовано: github.com/IgerOK/AllToAny (ожидает подтверждения пользователя). Опционально: активировать хук, починить secret-скан
 
 ## Open work (если status != idle)
 
