@@ -8,17 +8,14 @@ status: idle
 
 ## Последняя задача (резюме)
 
-- цель: полная самодостаточность папки .project-memory (ничего вне неё) + памятка для пользователя
-- что сделано: `memory-autosave.sh` и `pre-commit` перенесены внутрь папки, `scripts/` и `.githooks/` удалены, все ссылания на пути обновлены, создана `.project-memory/README.md`
-- статус: done
-- следующий шаг: none — опубликовано: github.com/IgerOK/AllToAny (ожидает подтверждения пользователя). Опционально: активировать хук, починить secret-скан
+- 2026-11-09: полная самодостаточность `.project-memory` (скрипты и хук внутри папки) + публикация памяти на GitHub — `IgerOK/AllToAny` (public, MIT). **RESOLVED**, подтверждено пользователем. Детали — в `SESSIONS.md` (записи от 2026-11-09) и `DECISIONS.md`.
 
 ## Open work (если status != idle)
 
 - next step: none
 - checks to run: `bash .project-memory/memory-check.sh`
 - blockers: none
-- decisions to reference: DECISIONS.md — 2026-11-09 «Self-contained .project-memory folder»
+- decisions to reference: DECISIONS.md
 
 ## Подпись последнего обновления
 
