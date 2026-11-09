@@ -83,3 +83,11 @@ Always start each new entry with a blank line.
 - **Verified:** push `main -> main` прошёл, tracking установлен; на GitHub ровно 1 коммит.
 - **Not done / limitations:** SSH-ключ к GitHub не настроен (пуш по HTTPS через GCM); secret-скан в `memory-check.sh` не работает (неверные флаги grep) — advisory.
 - **Next:** ожидает подтверждения пользователя. Опционально: активировать pre-commit хук, починить secret-скан.
+
+## 2026-11-09 — README для непродвинутых + описание репо
+
+- **Request:** описание GitHub-репо — простым языком для большинства (непродвинутых) пользователей; в README — пометка, что настоятельно рекомендуется Git в любом проекте и что агент сам его установит/активирует по просьбе.
+- **Done:** в GitHub About вставлено простое описание («Память» для ИИ-помощника…); в README.md (раздел «Зачем это нужно») добавлена цитата-рекомендация про Git и что агент сам установит/подключит; оба изменения запушены в `IgerOK/AllToAny` (коммиты 2e9f034, 10157eb).
+- **Verified:** GitHub API вернул обновлённое описание (DESC); коммиты `Fix typos in README.md` + `Add git recommendation note to README` в origin/main; git status чистый.
+- **Not done / limitations:** описание GitHub-репо — текстовое поле, правится только через UI/API (коммитами не меняется).
+- **Next:** по желанию — активировать pre-commit хук, починить secret-скан в memory-check.sh.
