@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Optional pre-commit: include memory + run memory-check.
+# Tolerant by design: never blocks a commit on warnings.
+# Install once: git config core.hooksPath .project-memory
+set -euo pipefail
+if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then exit 0; fi
+top="$(git rev-parse --show-toplevel 2>/dev/null || echo .)"
+if [ -d "$top/.project-memory" ]; then
+  git add -- ".project-memory" >/dev/null 2>&1 || true
+fi
+if [ -x "$top/.project-memory/memory-check.sh" ]; then
+  if ! "$top/.project-memory/memory-check.sh" >/dev/null 2>&1; then
+    echo "pre-commit: memory-check failed (errors)" >&2
+    exit 1
+  fi
+fi
+exit 0
